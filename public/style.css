@@ -1,0 +1,345 @@
+
+/* =====================================
+   1. GLOBAL STYLING
+===================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #3454d1;
+  --secondary: #7057d9;
+  --dark: #18243b;
+  --light: #f5f7ff;
+  --text: #536078;
+  --white: #ffffff;
+  --border: #e6eaf2;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* =====================================
+   2. NAVIGATION BAR
+===================================== */
+
+.navbar {
+  background: rgba(255, 255, 255, 0.96) !important;
+  padding: 17px 0;
+  box-shadow: 0 3px 20px rgba(30, 50, 90, 0.07);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  color: var(--primary) !important;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.navbar .nav-link {
+  color: var(--dark) !important;
+  font-weight: 600;
+  margin-left: 15px;
+  transition: 0.3s;
+}
+
+.navbar .nav-link:hover {
+  color: var(--primary) !important;
+}
+
+/* =====================================
+   3. HERO SECTION
+===================================== */
+
+.hero {
+  background:
+    radial-gradient(circle at 85% 20%,
+      rgba(255,255,255,0.20), transparent 25%),
+    linear-gradient(125deg, #263fa9, #6551ce 65%, #8061dc);
+
+  color: white;
+  padding: 105px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero h1 {
+  font-size: clamp(32px, 5vw, 54px);
+  font-weight: 800;
+  max-width: 850px;
+  margin: auto;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 650px;
+  margin: 20px auto;
+  color: #e6e9ff;
+}
+
+.hero .btn {
+  background: white;
+  color: var(--primary);
+  border: none;
+  border-radius: 10px;
+  padding: 13px 28px;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+
+.hero .btn:hover {
+  background: #edf0ff;
+  transform: translateY(-3px);
+}
+
+/* =====================================
+   4. MAIN CONTENT
+===================================== */
+
+main.container {
+  max-width: 1180px;
+}
+
+section {
+  padding: 25px 0;
+  scroll-margin-top: 85px;
+}
+
+.section-title {
+  font-size: 29px;
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+}
+
+section > p {
+  color: var(--text);
+  margin-bottom: 25px;
+}
+
+/* =====================================
+   5. FORM DESIGN
+===================================== */
+
+.form-card {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  max-width: 800px;
+  box-shadow: 0 8px 30px rgba(40, 55, 100, 0.06);
+  transition: 0.3s;
+}
+
+.form-card:hover {
+  box-shadow: 0 12px 35px rgba(40, 55, 100, 0.10);
+}
+
+.form-control,
+.form-select {
+  border: 1px solid #dfe4ef;
+  border-radius: 10px;
+  padding: 13px 15px;
+  background-color: #fbfcff;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(52, 84, 209, 0.12);
+  background: white;
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* =====================================
+   6. BUTTON DESIGN
+===================================== */
+
+.form-card .btn {
+  border: none;
+  border-radius: 9px;
+  padding: 12px 23px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background: var(--primary);
+}
+
+.btn-primary:hover {
+  background: #263fa9;
+  transform: translateY(-2px);
+}
+
+.btn-success {
+  background: #159b75;
+}
+
+.btn-success:hover {
+  background: #087e5d;
+  transform: translateY(-2px);
+}
+
+.btn-warning {
+  background: #f2a93b;
+  color: #292929;
+}
+
+.btn-warning:hover {
+  background: #e79821;
+  transform: translateY(-2px);
+}
+
+/* =====================================
+   7. RESOURCE CARDS
+===================================== */
+
+.resource-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 22px;
+  height: 100%;
+  box-shadow: 0 5px 18px rgba(40, 55, 100, 0.05);
+  transition: 0.3s;
+  position: relative;
+}
+
+.resource-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(40, 55, 100, 0.12);
+  border-color: #cbd4fa;
+}
+
+.resource-card h5 {
+  font-size: 19px;
+  color: var(--primary);
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.resource-card p {
+  color: var(--text);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/* =====================================
+   8. SECTION SEPARATORS
+===================================== */
+
+hr {
+  border: none;
+  height: 1px;
+  background: #dfe4ef;
+  margin: 45px 0;
+  opacity: 1;
+}
+
+/* =====================================
+   9. SUCCESS AND ERROR MESSAGES
+===================================== */
+
+#supportMessage,
+#issueMessage {
+  color: #087e5d;
+  font-weight: 600;
+}
+
+/* =====================================
+   10. FOOTER
+===================================== */
+
+footer {
+  background: #18243b;
+  color: white;
+  padding: 28px 15px;
+  margin-top: 55px;
+  font-size: 14px;
+}
+
+/* =====================================
+   11. RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 768px) {
+
+  .hero {
+    padding: 75px 18px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .section-title {
+    font-size: 25px;
+  }
+
+  .form-card {
+    padding: 22px;
+  }
+
+  .navbar .nav-link {
+    margin-left: 0;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .hero {
+    padding: 60px 15px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .section-title {
+    font-size: 23px;
+  }
+
+  .form-card {
+    padding: 17px;
+    border-radius: 13px;
+  }
+
+  .resource-card {
+    padding: 18px;
+  }
+
+  .form-card .btn {
+    width: 100%;
+  }
+}
